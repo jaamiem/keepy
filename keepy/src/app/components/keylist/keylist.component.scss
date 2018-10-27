@@ -1,0 +1,35 @@
+
+.content {
+	margin: 50px auto 0;
+	width: 90%;
+
+	.listMenu {
+		display: inline-block;
+		width: 80%;
+		padding-left: 50px;
+		padding-right: 50px;
+		overflow: auto;
+
+		.keySearch {
+			margin-top: .7em;
+			width: 60%;
+		}
+		.menuRight {
+			background: red;
+			color: red;
+		}
+	}
+	.menuRight {
+
+	}
+
+}
+
+table {
+	width: 100%;
+}
+
+.mat-form-field {
+	font-size: 14px;
+	width: 100%;
+}

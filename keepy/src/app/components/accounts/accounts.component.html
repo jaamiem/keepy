@@ -1,0 +1,46 @@
+
+<div class='accTabs'>
+
+	<mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+		<mat-tab label="Login">
+			<div class='accform'>
+				<h1>Keepy Login</h1>
+				<form action=''>
+					<input id='loginUsername' class='formField' type='text' placeholder='Username' name='username'/>
+					<br /><br />
+					<input id='loginPassword' class='formField' type='password' placeholder='Password' name='password'/>
+					<br /><br />
+					<input type='submit' value='submit' />
+					<br /><br />
+				</form>
+			</div>
+		</mat-tab>
+
+		<mat-tab label="Sign-Up">
+			<div class='accform'>
+				<h1>Keepy Sign-Up</h1>
+				<form action=''>
+					<input id='signupUsername' class='formField' type='text' placeholder='Username' name='username' autocomplete='off'/>
+					<br /><br />
+					<input id='signupIDNum' class='formField' type='text' placeholder='ID Number' name='idNum'/>
+					<br /><br />
+					<input type='radio' name='role' value='student' checked /> Student
+					<input type='radio' name='role' value='staff' /> Staff
+					<!-- Mat Radio Group crashes site for some reason -->
+					<!-- <mat-radio-group>
+						<mat-radio-button value='student'>Student</mat-radio-button>
+						<mat-radio-button value='staff'>Staff</mat-radio-button>
+					</mat-radio-group> -->
+					<br /><br />
+					<input id='signupPassword' class='formField' type='password' placeholder='Password' name='password'/>
+					<br /><br />
+					<input id='signupPasswordConf' class='formField' type='password' placeholder='Confirm Password' name='passwordConf'/>
+					<br /><br />
+					<input type='submit' value='submit' />
+					<br /><br />
+				</form>
+			</div>
+		</mat-tab>
+	</mat-tab-group>
+
+</div>
