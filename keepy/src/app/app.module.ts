@@ -10,8 +10,6 @@ import { TopbarComponent } from './components/topbar/topbar.component';
 import { KeylistComponent } from './components/keylist/keylist.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AccountsComponent } from './components/accounts/accounts.component';
-import { TablePanelComponent } from './components/table-panel/table-panel.component';
-import { DataColumnComponent } from './components/data-column/data-column.component';
 import { ManagerComponent } from './components/manager/manager.component';
 import { RoomlistComponent } from './components/roomlist/roomlist.component';
 import { LoginComponent } from './components/login/login.component';
@@ -24,8 +22,6 @@ import { LoginComponent } from './components/login/login.component';
 		KeylistComponent,
 		PageNotFoundComponent,
 		AccountsComponent,
-		TablePanelComponent,
-		DataColumnComponent,
 		ManagerComponent,
 		RoomlistComponent,
 		LoginComponent

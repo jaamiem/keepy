@@ -6,7 +6,7 @@
 		<mat-tab label="Key List">
 			<div class="listMenu">
 				<mat-form-field class="keySearch">
-					<input matInput type="text" placeholder="Search" [(ngModel)]="value">
+					<input matInput (keyup)="applyFilter($event.target.value)" type="text" placeholder="Filter" [(ngModel)]="value">
 					<button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
 						<mat-icon>x</mat-icon>
 					</button>

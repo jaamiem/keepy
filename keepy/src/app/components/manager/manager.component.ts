@@ -14,9 +14,11 @@ export class ManagerComponent implements OnInit {
 	ngOnInit() {
 	}
 
-	invertView(){
+	invertView() {
 		// console.log('viewRooms: ' + this.viewRooms);
 		this.viewRooms = !this.viewRooms;
 	}
+
+	
 
 }
