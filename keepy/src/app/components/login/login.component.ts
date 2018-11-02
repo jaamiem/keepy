@@ -21,4 +21,11 @@ export class LoginComponent implements OnInit {
 	ngOnInit() {
 	}
 
+	userLogon(uname: string, pword: string){
+		// if(uname != null) {
+		// 	console.log(uname + " :: " + pword);
+		// }
+		console.log(uname + " :: " + pword);
+	}
+
 }

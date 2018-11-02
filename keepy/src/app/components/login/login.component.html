@@ -11,6 +11,6 @@
 			<mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
 		</mat-form-field>
 
-		<button mat-raised-button [mat-dialog-close]='username' cdkFocusInitial></button>
+		<button mat-raised-button [mat-dialog-close]='userLogon(username, password)'>Submit</button>
 	</form>
 </div>
