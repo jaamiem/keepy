@@ -1,3 +1,16 @@
-<p>
-  login works!
-</p>
+<div class=''>
+	<h1>Keepy</h1>
+	<h2> Login </h2>
+	<form action=''>
+		<mat-form-field appearance='fill'>
+			<input matInput name='username' placeholder="Enter your Username" [(ngModel)]='username'>
+		</mat-form-field>
+
+		<mat-form-field appearance='fill'>
+			<input matInput name='password' placeholder="Enter your password" [type]="hide ? 'password' : 'text'" [(ngModel)]='password'>
+			<mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+		</mat-form-field>
+
+		<button mat-raised-button [mat-dialog-close]='username' cdkFocusInitial></button>
+	</form>
+</div>

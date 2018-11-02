@@ -1,16 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Component } from '@angular/core';
+// import { Router, NavigationEnd } from '@angular/router';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { LoginComponent } from '../login/login.component';
+
+
 
 @Component({
-  selector: 'app-topbar',
-  templateUrl: './topbar.component.html',
-  styleUrls: ['./topbar.component.scss']
+	selector: 'app-topbar',
+	templateUrl: './topbar.component.html',
+	styleUrls: ['./topbar.component.scss']
 })
-export class TopbarComponent implements OnInit {
+export class TopbarComponent {
+	constructor(public dialog: MatDialog) { }
 
-  constructor(private router: Router) { }
+	openDialog(): void {
+		const dialogRef = this.dialog.open(LoginComponent, {
+			width: '30%'
+		});
 
-  ngOnInit() {
-  }
-
+		dialogRef.afterClosed().subscribe(result => {
+			console.log('Modal Closed..');
+			// Add code to capture login details
+		});
+	}
 }

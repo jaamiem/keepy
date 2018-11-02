@@ -1,0 +1,38 @@
+<div class="content">
+
+	<mat-tab-group>
+
+		<!-- KEY LIST TAB -->
+		<mat-tab label="Key List">
+			<div class="listMenu">
+				<mat-form-field class="keySearch">
+					<input matInput type="text" placeholder="Search" [(ngModel)]="value">
+					<button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+						<mat-icon>x</mat-icon>
+					</button>
+				</mat-form-field>
+
+				<mat-button-toggle-group name="tableType" aria-label="Table Type" (change)='invertView()' >
+					<mat-button-toggle > Show Rooms </mat-button-toggle>
+					<mat-button-toggle checked> Show All </mat-button-toggle>
+				</mat-button-toggle-group>
+			</div>
+
+			<div *ngIf='!viewRooms; else roomsView' >
+				<app-keylist></app-keylist>
+			</div>
+			<ng-template #roomsView>
+				<app-roomlist></app-roomlist>
+			</ng-template>
+
+
+		</mat-tab>
+
+		<!-- FOB LIST TAB -->
+		<mat-tab label="Fob List"> Content 2 </mat-tab>
+
+		<!-- HISTORY TAB -->
+		<mat-tab label="History"> Content 3 </mat-tab>
+	</mat-tab-group>
+
+</div>

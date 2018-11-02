@@ -54,11 +54,13 @@ import { AppComponent } from './app.component';
 import { ShellComponent } from './components/shell/shell.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { KeylistComponent } from './components/keylist/keylist.component';
-import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { SignupComponent } from './components/signup/signup.component';
 import { AccountsComponent } from './components/accounts/accounts.component';
 import { TablePanelComponent } from './components/table-panel/table-panel.component';
+import { DataColumnComponent } from './components/data-column/data-column.component';
+import { ManagerComponent } from './components/manager/manager.component';
+import { RoomlistComponent } from './components/roomlist/roomlist.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
 	declarations: [
@@ -66,11 +68,13 @@ import { TablePanelComponent } from './components/table-panel/table-panel.compon
 		ShellComponent,
 		TopbarComponent,
 		KeylistComponent,
-		LoginComponent,
 		PageNotFoundComponent,
-		SignupComponent,
 		AccountsComponent,
-		TablePanelComponent
+		TablePanelComponent,
+		DataColumnComponent,
+		ManagerComponent,
+		RoomlistComponent,
+		LoginComponent
 	],
 	imports: [
 		BrowserModule,
@@ -123,6 +127,7 @@ import { TablePanelComponent } from './components/table-panel/table-panel.compon
 		// ScrollingModule,
 	],
 	providers: [],
-	bootstrap: [AppComponent]
+	bootstrap: [AppComponent],
+	entryComponents: [LoginComponent]
 })
 export class AppModule { }

@@ -1,0 +1,35 @@
+
+.content {
+	margin: 50px auto 0;
+	width: 90%;
+	height: 100vh;
+
+	.listMenu {
+		display: inline-block;
+		width: 80%;
+		padding-left: 50px;
+		padding-right: 50px;
+		overflow: auto;
+
+		.keySearch {
+			margin-top: .7em;
+			width: 60%;
+		}
+		.menuRight {
+			background: red;
+			color: red;
+		}
+	}
+	.mat-button-toggle-checked {
+		background: #750075;
+		color: white;
+		font-weight: 500;
+		transition: .3s ease-in-out;
+	}
+
+}
+
+.mat-form-field {
+	font-size: 14px;
+	width: 100%;
+}

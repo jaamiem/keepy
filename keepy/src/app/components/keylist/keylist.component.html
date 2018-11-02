@@ -1,107 +1,62 @@
-<div class="content">
+<table mat-table [dataSource]="keyList" class="mat-elevation-z8">
+	<!-- keyid Column -->
+	<ng-container matColumnDef="keyId">
+		<th mat-header-cell *matHeaderCellDef> KeyID. </th>
+		<td mat-cell *matCellDef="let element"> {{element.keyId}} </td>
+	</ng-container>
 
-	<mat-tab-group>
-		<mat-tab label="Key List">
+	<!-- Keytype Column -->
+	<ng-container matColumnDef="keyType">
+		<th mat-header-cell *matHeaderCellDef> Key Type </th>
+		<td mat-cell *matCellDef="let element"> {{element.keyType}} </td>
+	</ng-container>
 
-			<div class="listMenu">
-				<mat-form-field class="keySearch">
-					<input matInput type="text" placeholder="Search" [(ngModel)]="value">
-					<button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-						<mat-icon>x</mat-icon>
-					</button>
-				</mat-form-field>
+	<!-- TimeDateReq Column -->
+	<ng-container matColumnDef="timeDateReq">
+		<th mat-header-cell *matHeaderCellDef> Time Taken </th>
+		<td mat-cell *matCellDef="let element"> {{element.timeDateReq}} </td>
+	</ng-container>
 
-				<div align="menuRight">
-					<button mat-button>Stored Keys</button>
-					<button mat-button>Held Keys</button>
-					<button mat-button>Lost Keys</button>
-				</div>
-			</div>
+	<!-- TimeDateRet Column -->
+	<ng-container matColumnDef="timeDateRet">
+		<th mat-header-cell *matHeaderCellDef> Returned By </th>
+		<td mat-cell *matCellDef="let element"> {{element.timeDateRet}} </td>
+	</ng-container>
 
+	<!-- Alocated Column -->
+	<ng-container matColumnDef="allocated">
+		<th mat-header-cell *matHeaderCellDef> Allocated To </th>
+		<td mat-cell *matCellDef="let element"> {{element.allocated}} </td>
+	</ng-container>
 
-			<mat-accordion>
-				<mat-expansion-panel>
-					<mat-expansion-panel-header>
-						<mat-panel-title> Room101 </mat-panel-title>
-					</mat-expansion-panel-header>
+	<!-- Alocatedby Column -->
+	<ng-container matColumnDef="allocatedBy">
+		<th mat-header-cell *matHeaderCellDef> Allocated by </th>
+		<td mat-cell *matCellDef="let element"> {{element.allocatedBy}} </td>
+	</ng-container>
 
-					<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+	<!-- button Column -->
+	<ng-container matColumnDef="options">
+		<th mat-header-cell *matHeaderCellDef> Options </th>
+		<td mat-cell *matCellDef="let element">
+			<!-- <button mat-button>Options</button>  -->
+			<button mat-icon-button [matMenuTriggerFor]="menu">
+				<i class="material-icons">more_vert</i>
+			</button>
+			<mat-menu #menu="matMenu">
+				<button mat-menu-item>
+					<span>Update</span>
+				</button>
+				<button mat-menu-item>
+					<span>Clear</span>
+				</button>
+				<button mat-menu-item>
+					<span>Delete</span>
+				</button>
+			</mat-menu>
+		</td>
+	</ng-container>
 
-						<!-- keyid Column -->
-						<ng-container matColumnDef="keyId">
-							<th mat-header-cell *matHeaderCellDef> KeyID. </th>
-							<td mat-cell *matCellDef="let element"> {{element.keyId}} </td>
-						</ng-container>
-
-						<!-- Keytype Column -->
-						<ng-container matColumnDef="keyType">
-							<th mat-header-cell *matHeaderCellDef> Key Type </th>
-							<td mat-cell *matCellDef="let element"> {{element.keyType}} </td>
-						</ng-container>
-
-						<!-- TimeDateReq Column -->
-						<ng-container matColumnDef="timeDateReq">
-							<th mat-header-cell *matHeaderCellDef> Time Taken </th>
-							<td mat-cell *matCellDef="let element"> {{element.timeDateReq}} </td>
-						</ng-container>
-
-						<!-- TimeDateRet Column -->
-						<ng-container matColumnDef="timeDateRet">
-							<th mat-header-cell *matHeaderCellDef> Returned By </th>
-							<td mat-cell *matCellDef="let element"> {{element.timeDateRet}} </td>
-						</ng-container>
-
-						<!-- Alocated Column -->
-						<ng-container matColumnDef="allocated">
-							<th mat-header-cell *matHeaderCellDef> Allocated To </th>
-							<td mat-cell *matCellDef="let element"> {{element.allocated}} </td>
-						</ng-container>
-
-						<!-- Alocatedby Column -->
-						<ng-container matColumnDef="allocatedBy">
-							<th mat-header-cell *matHeaderCellDef> Allocated by </th>
-							<td mat-cell *matCellDef="let element"> {{element.allocatedBy}} </td>
-						</ng-container>
-
-						<!-- button Column -->
-						<ng-container matColumnDef="options">
-							<th mat-header-cell *matHeaderCellDef> Options </th>
-							<td mat-cell *matCellDef="let element">
-								<!-- <button mat-button>Options</button>  -->
-								<button mat-icon-button [matMenuTriggerFor]="menu">
-									<i class="material-icons">more_vert</i>
-								</button>
-								<mat-menu #menu="matMenu">
-									<button mat-menu-item>
-										<span>Update</span>
-									</button>
-									<button mat-menu-item>
-										<span>Clear</span>
-									</button>
-									<button mat-menu-item>
-										<span>Delete</span>
-									</button>
-								</mat-menu>
-							</td>
-						</ng-container>
-
-						<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-						<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-					</table>
-				</mat-expansion-panel>
-
-				<mat-expansion-panel (opened)="panelOpenState=true" (closed)="panelOpenState=false">
-					<mat-expansion-panel-header>
-						<mat-panel-title> Room102 </mat-panel-title>
-					</mat-expansion-panel-header>
-
-					<p>I'm visible because I am open</p>
-				</mat-expansion-panel>
-			</mat-accordion>
-		</mat-tab>
-
-		<mat-tab label="Fob List"> Content 2 </mat-tab>
-		<mat-tab label="History"> Content 3 </mat-tab>
-	</mat-tab-group>
-
-</div>
+	<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+	<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
