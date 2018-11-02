@@ -39,3 +39,11 @@ ul {
 		}
 	}
 }
+
+.active {
+	background: #4d004d;
+	color: #b3b3b3;
+	border-radius: 12px;
+	box-shadow: 3px 3px 18px #330033 inset;
+	transition: all .15s ease-in-out;
+}

@@ -9,7 +9,6 @@ import { ShellComponent } from './components/shell/shell.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { KeylistComponent } from './components/keylist/keylist.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { AccountsComponent } from './components/accounts/accounts.component';
 import { ManagerComponent } from './components/manager/manager.component';
 import { RoomlistComponent } from './components/roomlist/roomlist.component';
 import { LoginComponent } from './components/login/login.component';
@@ -21,7 +20,6 @@ import { LoginComponent } from './components/login/login.component';
 		TopbarComponent,
 		KeylistComponent,
 		PageNotFoundComponent,
-		AccountsComponent,
 		ManagerComponent,
 		RoomlistComponent,
 		LoginComponent
